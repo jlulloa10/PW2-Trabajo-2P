@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Ayuda - Cajero Automático</title>
+    <style>
+        body {
+            background: #f5f6fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .cajero-card {
+            background: #fff;
+            max-width: 410px;
+            margin: 45px auto;
+            padding: 35px 30px 25px 30px;
+            border-radius: 13px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+        }
+        h2 {
+            text-align: center;
+            color: #1366d6;
+            margin-bottom: 14px;
+        }
+        h3 {
+            color: #1e337c;
+            margin-bottom: 7px;
+        }
+        ul {
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+        .links {
+            margin-top: 24px;
+            text-align: center;
+        }
+        .links a {
+            color: #1366d6;
+            text-decoration: none;
+            margin: 0 9px;
+            font-weight: 600;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</h:head>
+<h:body>
+    <f:event type="preRenderView" listener="#{cajeroBean.limpiarMensaje}"/>
+    <div class="cajero-card">
+        <h2>Cajero Automático - Proyecto</h2>
+        <h3>Integrantes del grupo:</h3>
+        <ul>
+            <li>Jorge Luis Ulloa</li>
+
+        </ul>
+        <h3>Datos de la clase</h3>
+        <ul>
+            <li>Clase: Programación Web 2</li>
+            <li>Sección: PROGRAMACION WEB II (CHOL-Z/LU-3) 2P25</li>
+            <li>Catedrático: Ing. Kenny Joseph Cooper</li>
+        </ul>
+        <div class="links">
+            <h:link outcome="deposito.xhtml" value="Ir a Depósito"/>
+            <span>|</span>
+            <h:link outcome="retiro.xhtml" value="Ir a Retiro"/>
+        </div>
+    </div>
+</h:body>
+</html>
+
